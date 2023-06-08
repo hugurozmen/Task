@@ -50,7 +50,6 @@ export default {
   components: {ForecastTable, NavBar},
   computed: {
     weatherData() {
-      console.log(store.getters.getWeatherData)
       return store.getters.getWeatherData.data
     },
     selectedCity() {

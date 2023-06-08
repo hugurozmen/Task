@@ -147,7 +147,6 @@ export default {
   }),
   methods: {
     async userLogin() {
-      console.log(UserStore)
       let valid = await this.$refs.loginForm.validate();
       if (!valid) return;
       this.loginIsLoading = true;

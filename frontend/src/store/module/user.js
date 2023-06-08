@@ -1,5 +1,4 @@
 import AuthService from "@/services/AuthService";
-import {TOKEN_TYPE} from "@/configs";
 
 const state = {
     access: null,
@@ -18,7 +17,6 @@ const actions = {
         return new Promise((resolve, reject) => {
             AuthService.login(payload)
                 .then(({data}) => {
-                    console.log(data)
                     commit('SET_TOKEN', data);
                     resolve(data);
                 })

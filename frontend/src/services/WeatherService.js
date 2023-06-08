@@ -19,7 +19,6 @@ function format_query_params(params = {}) {
 export default {
     getWeatherData(payload) {
         let query = format_query_params(payload)
-        console.log(query)
         return $axios.get(`${API_URL}weather/forecast/?${query}`);
     }
 }

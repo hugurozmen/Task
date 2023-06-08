@@ -30,14 +30,12 @@ router.beforeEach((to, from, next) => {
     const publicPages = ['/login'];
     const authRequired = !publicPages.includes(to.path);
     const loggedIn = localStorage.getItem('access');
-    console.log(loggedIn, to.path, authRequired)
     if (to.path === '/' && loggedIn) {
         return next('/dashboard');
     } else if (to.path === '/' && !loggedIn) {
         return next('/login');
     }
     if (authRequired && !loggedIn) {
-        console.log('a')
         return next('/login');
     }
     next();

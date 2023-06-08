@@ -19,13 +19,5 @@ export default {
   computed: {
     ...mapGetters(['isAuthenticated'])
   },
-  // created() {
-  //   console.log(this.isAuthenticated)
-  //   if (this.isAuthenticated) {
-  //     this.$router.push({name: 'Dashboard'})
-  //   } else {
-  //     this.$router.push({name: 'Login'})
-  //   }
-  // }
 };
 </script>
